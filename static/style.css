@@ -1,0 +1,208 @@
+/* Basic Reset */
+/* Apply a reset to all elements */
+* {
+  margin: 0;               /* Remove default margin from all elements */
+  padding: 0;              /* Remove default padding from all elements */
+  box-sizing: border-box;  /* Include padding and border in the element’s total width and height */
+}
+
+/* Global Body Styling */
+body {
+  font-family: Arial, sans-serif; /* Set default font family to Arial (fallback to sans-serif) */
+  background: #f4f4f4;            /* Set a light gray background color */
+  line-height: 1.6;               /* Set line height for better readability */
+}
+
+/* Container Styling */
+/* Defines the main container for page content */
+.container {
+  width: 90%;                   /* Container occupies 90% of the viewport width */
+  max-width: 800px;             /* Maximum width is limited to 800px */
+  margin: 50px auto;            /* Center container horizontally with 50px top and bottom margin */
+  padding: 30px;                /* Add 30px padding inside the container */
+  background: #fff;             /* Set background color to white */
+  border-radius: 8px;           /* Round the corners with an 8px radius */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Apply a subtle shadow for depth */
+}
+
+/* Heading Styling */
+h1 {
+  text-align: center;           /* Center-align the heading text */
+  margin-bottom: 20px;          /* Add space below the heading */
+  color: #333;                  /* Set text color to dark gray */
+  animation: fadeIn 2s ease-in-out; /* Apply a fade-in animation lasting 2 seconds */
+}
+
+/* Form Group Styling */
+/* Add spacing between divs inside a form */
+form div {
+  margin-bottom: 15px;          /* Space between each form element */
+}
+
+/* Label Styling */
+label {
+  display: block;               /* Make labels display as block elements */
+  margin-bottom: 5px;           /* Add space below the label */
+  color: #555;                  /* Set label text color to a medium gray */
+}
+
+/* Input Field Styling */
+/* Style text, password, and number input fields uniformly */
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;                  /* Input fields take full width of their container */
+  padding: 8px;                 /* Add padding for inner spacing */
+  border: 1px solid #ddd;       /* Set a light border */
+  border-radius: 4px;           /* Round the corners slightly */
+}
+
+/* Base Button Styling */
+/* Apply base styles to elements with the class "btn" */
+.btn {
+  display: inline-block;        /* Display as inline-block for proper padding/margin behavior */
+  color: #fff;                  /* Set text color to white */
+  padding: 10px 15px;           /* Add vertical and horizontal padding */
+  text-decoration: none;        /* Remove underline from text */
+  border-radius: 4px;           /* Round the corners */
+  border: none;                 /* Remove any default border */
+  cursor: pointer;              /* Change cursor to pointer on hover */
+  transition: background 0.3s ease; /* Smooth background transition on state changes */
+  margin-top: 10px;             /* Add top margin for spacing */
+  text-align: center;           /* Center the text inside the button */
+}
+
+/* Button Hover Effect */
+/* Darken the button background when hovered */
+.btn:hover {
+  filter: brightness(85%);      /* Reduce brightness to 85% to create a hover effect */
+}
+
+/* Unordered List Styling for Buttons */
+/* Use flexbox for a row of buttons */
+ul {
+  display: flex;                /* Enable flexbox layout */
+  flex-wrap: wrap;              /* Allow buttons to wrap onto the next line if needed */
+  justify-content: center;      /* Center the buttons horizontally */
+  list-style: none;             /* Remove bullet points from the list */
+  padding: 0;                   /* Remove default padding */
+  margin: 20px auto;            /* Center the list with vertical margin */
+  gap: 10px;                    /* Set spacing between each button */
+}
+
+/* List Item Styling for Buttons */
+/* Each list item takes up roughly one-third of the row */
+ul li {
+  flex: 0 1 calc(33.333% - 10px); /* Flexible width with a basis of one-third minus gap */
+  min-width: 180px;              /* Ensure a minimum width for buttons on smaller screens */
+  margin: 0;                     /* Remove default margin */
+}
+
+/* Individual Button Colors via nth-child */
+/* 1st button: Red */
+ul li:nth-child(1) .btn {
+  background: red;               /* Set background color to red */
+}
+
+/* 2nd button: Blue */
+ul li:nth-child(2) .btn {
+  background: blue;              /* Set background color to blue */
+}
+
+/* 3rd button: Yellow with dark text for contrast */
+ul li:nth-child(3) .btn {
+  background: yellow;            /* Set background color to yellow */
+  color: #333;                  /* Change text color to dark gray for readability */
+}
+
+/* 4th button: Brown */
+ul li:nth-child(4) .btn {
+  background: brown;             /* Set background color to brown */
+}
+
+/* 5th button (Optional): Cycle back to Red */
+ul li:nth-child(5) .btn {
+  background: red;               /* Set background color to red for the fifth button */
+}
+
+/* --- Additional Button Classes for Other Pages --- */
+/* Apply these classes to specific buttons (Deposit, Withdraw, etc.) */
+.btn1, .btn2, .btn3, .btn4, .btn5, .btn6 {
+  display: inline-block;        /* Inline-block display for proper layout */
+  color: #fff;                  /* White text color */
+  padding: 10px 15px;           /* Padding for a comfortable clickable area */
+  text-decoration: none;        /* No underline on text */
+  border-radius: 4px;           /* Rounded corners */
+  border: none;                 /* No borders */
+  cursor: pointer;              /* Pointer cursor on hover */
+  transition: background 0.3s ease; /* Smooth transition for background changes */
+  margin-top: 10px;             /* Top margin for spacing */
+  text-align: center;           /* Center the text */
+}
+
+/* Specific Background Colors for Each Additional Button Class */
+.btn6 {
+  background: red;              /* btn6 has a red background */
+}
+
+.btn1 {
+  background: blue;             /* btn1 has a blue background */
+}
+
+.btn2 {
+  background: darkmagenta;      /* btn2 has a dark magenta background */
+}
+
+.btn3 {
+  background: yellow;           /* btn3 has a yellow background */
+}
+
+.btn4 {
+  background: green;            /* btn4 has a green background */
+}
+
+.btn5 {
+  background: darkorange;       /* btn5 has a dark orange background */
+}
+
+/* Flash Message Container */
+/* Container for flash messages shown to users */
+.flash-messages {
+  margin-bottom: 20px;          /* Add spacing below flash messages */
+}
+
+/* Base Flash Message Styling */
+/* General styling for any flash message */
+.flash-message {
+  padding: 10px;                /* Padding inside the flash message box */
+  margin-bottom: 10px;          /* Space below each flash message */
+  border-radius: 4px;           /* Rounded corners for flash messages */
+}
+
+/* Flash Message Styling for Success */
+/* Specific styling for success messages */
+.flash-message.success {
+  background-color: #d4edda;    /* Light green background for success */
+  color: #155724;               /* Dark green text for contrast */
+}
+
+/* Flash Message Styling for Errors */
+/* Specific styling for error messages */
+.flash-message.error {
+  background-color: #f8d7da;    /* Light red background for errors */
+  color: #721c24;               /* Dark red text for readability */
+}
+
+/* Flash Message Styling for Information */
+/* Specific styling for informational messages */
+.flash-message.info {
+  background-color: #d1ecf1;    /* Light blue background for info messages */
+  color: #0c5460;               /* Dark blue text for clarity */
+}
+
+/* Fade In Animation Keyframes */
+/* Defines the fadeIn animation used for headings */
+@keyframes fadeIn {
+  from { opacity: 0; }         /* Start with the element fully transparent */
+  to { opacity: 1; }           /* End with the element fully visible */
+}

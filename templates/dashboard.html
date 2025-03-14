@@ -1,0 +1,11 @@
+{% extends "base.html" %} <!-- Inherit from the base.html template -->
+{% block content %} <!-- Begin the content block that overrides the placeholder in base.html -->
+  <h1>ATM Dashboard</h1> <!-- Main heading for the dashboard page -->
+  <ul> <!-- Start an unordered list to display dashboard options -->
+    <li><a href="{{ url_for('checkbalance') }}" class="btn">Check Balance</a></li> <!-- Link to the check balance page with a button style -->
+    <li><a href="{{ url_for('deposit') }}" class="btn">Deposit Money</a></li> <!-- Link to the deposit money page -->
+    <li><a href="{{ url_for('withdraw') }}" class="btn">Withdraw Money</a></li> <!-- Link to the withdraw money page -->
+    <li><a href="{{ url_for('viewhistory') }}" class="btn">View Transactions</a></li> <!-- Link to the transaction history page -->
+    <li><a href="{{ url_for('logout') }}" class="btn">Logout</a></li> <!-- Link to log out from the application -->
+  </ul>
+{% endblock %} <!-- End of the content block -->

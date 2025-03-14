@@ -1,0 +1,16 @@
+{% extends "base.html" %} <!-- Extend the base template -->
+{% block content %} <!-- Begin content block for withdrawal functionality -->
+  <h1>Withdraw Money</h1> <!-- Heading for the withdraw page -->
+  <form method="POST"> <!-- Form to submit withdrawal details using POST -->
+    <div> <!-- Container for the withdrawal amount input -->
+      <label>{{ msgs["enter_withdraw"] }}</label> <!-- Label prompting the user to enter the withdrawal amount, localized -->
+      <input type="number" step="0.01" name="withdraw_amount" required> <!-- Numeric input for withdrawal amount with decimals allowed; required -->
+    </div>
+    <div> <!-- Container for the PIN confirmation input -->
+      <label>{{ msgs["enter_pin_confirm"] }}</label> <!-- Label for PIN confirmation, localized -->
+      <input type="password" name="pin_confirm" required> <!-- Password field to confirm the user's PIN; required -->
+    </div>
+    <button type="submit" class="btn6">Withdraw</button> <!-- Submit button to process the withdrawal -->
+  </form>
+  <a href="{{ url_for('dashboard') }}" class="btn1">Back to Dashboard</a> <!-- Link to go back to the dashboard -->
+{% endblock %} <!-- End of content block -->

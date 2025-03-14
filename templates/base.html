@@ -1,0 +1,23 @@
+<!DOCTYPE html> <!-- Declare the document as an HTML5 document -->
+<html lang="en"> <!-- Set the language of the document to English -->
+<head>
+  <meta charset="UTF-8"> <!-- Define the character encoding as UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensure proper scaling on mobile devices -->
+  <title>ATM Application</title> <!-- Set the title of the webpage -->
+  <link rel="stylesheet" href="../static/style.css"> <!-- Link to the external CSS stylesheet for styling -->
+</head>
+<body>
+  <div class="container"> <!-- Main container div to wrap the content -->
+    {% with messages = get_flashed_messages(with_categories=true) %} <!-- Start a block to capture flashed messages with categories from Flask -->
+      {% if messages %} <!-- Check if there are any flashed messages -->
+        <div class="flash-messages"> <!-- Container div for all flash messages -->
+          {% for category, message in messages %} <!-- Loop over each message and its associated category -->
+            <div class="flash-message {{ category }}">{{ message }}</div> <!-- Display the message with a class based on its category for styling -->
+          {% endfor %} <!-- End of the for loop -->
+        </div>
+      {% endif %} <!-- End of the if condition checking for messages -->
+    {% endwith %} <!-- End of the 'with' block -->
+    {% block content %}{% endblock %} <!-- Placeholder block for child templates to insert page-specific content -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "base.html" %} <!-- Inherit from the base template -->
+{% block content %} <!-- Begin the content block for transaction history -->
+  <h1>Transaction History</h1> <!-- Heading for the transaction history page -->
+  {% if transactions is not none %} <!-- Check if the transactions variable is set (even if empty) -->
+    {% if transactions %} <!-- Check if there are any transactions in the list -->
+      <ul> <!-- Start an unordered list to display each transaction -->
+        {% for txn in transactions %} <!-- Loop over each transaction object -->
+          <li>{{ txn.timestamp }} - {{ txn.description }}</li> <!-- List item showing the timestamp and description of each transaction -->
+        {% endfor %} <!-- End of the for loop -->
+      </ul>
+    {% else %} <!-- Else block if there are no transactions -->
+      <p>{{ msgs["no_transactions"] }}</p> <!-- Show a message indicating there are no transactions (localized) -->
+    {% endif %} <!-- End of inner if block -->
+    <a href="{{ url_for('dashboard') }}" class="btn1">Back to Dashboard</a> <!-- Link to return to the dashboard -->
+  {% else %} <!-- Else block if the transactions variable is not set (e.g., before PIN confirmation) -->
+    <form method="POST"> <!-- Form to request PIN confirmation to view the transaction history -->
+      <div>
+        <label>{{ msgs["enter_pin_confirm"] }}</label> <!-- Label prompting the user to confirm their PIN -->
+        <input type="password" name="pin_confirm" required> <!-- Password field for PIN confirmation; required -->
+      </div>
+      <button type="submit" class="btn5">View History</button> <!-- Button to submit the PIN confirmation -->
+    </form>
+    <a href="{{ url_for('dashboard') }}" class="btn1">Back to Dashboard</a> <!-- Link to return to the dashboard -->
+  {% endif %} <!-- End of outer if block -->
+{% endblock %} <!-- End of the content block -->

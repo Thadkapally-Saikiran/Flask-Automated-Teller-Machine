@@ -1,0 +1,15 @@
+{% extends "base.html" %} <!-- Extend the base template -->
+{% block content %} <!-- Start the content block for the login page -->
+  <h1>{{ msgs["welcome"] }}</h1> <!-- Display a welcome message using the localized messages dictionary -->
+  <form method="POST"> <!-- Form to handle login, submitted via POST -->
+    <div> <!-- Container for the account number input -->
+      <label>{{ msgs["enter_account"] }}</label> <!-- Label prompting the user to enter their account number -->
+      <input type="text" name="account_number" required> <!-- Text input field for account number; required -->
+    </div>
+    <div> <!-- Container for the PIN input -->
+      <label>{{ msgs["enter_pin"] }}</label> <!-- Label prompting the user to enter their PIN -->
+      <input type="password" name="pin" required> <!-- Password input field for the PIN; required -->
+    </div>
+    <button type="submit" class="btn4">Login</button> <!-- Submit button to perform the login -->
+  </form>
+{% endblock %} <!-- End of content block -->

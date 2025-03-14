@@ -1,0 +1,16 @@
+{% extends "base.html" %} <!-- Inherit from the base.html template -->
+{% block content %} <!-- Begin the content block for deposit functionality -->
+  <h1>Deposit Money</h1> <!-- Heading for the deposit page -->
+  <form method="POST"> <!-- Start a form that submits data using POST method -->
+    <div> <!-- Container for the deposit amount input -->
+      <label>{{ msgs["enter_deposit"] }}</label> <!-- Label text from a messages dictionary (likely for localization) -->
+      <input type="number" step="0.01" name="deposit_amount" required> <!-- Input field for deposit amount allowing decimal values; required field -->
+    </div>
+    <div> <!-- Container for the PIN confirmation input -->
+      <label>{{ msgs["enter_pin_confirm"] }}</label> <!-- Label for PIN confirmation, also retrieved from messages dictionary -->
+      <input type="password" name="pin_confirm" required> <!-- Password field for PIN confirmation; required field -->
+    </div>
+    <button type="submit" class="btn2">Deposit</button> <!-- Submit button to perform the deposit action -->
+  </form>
+  <a href="{{ url_for('dashboard') }}" class="btn1">Back to Dashboard</a> <!-- Link to return to the dashboard -->
+{% endblock %} <!-- End of the content block -->

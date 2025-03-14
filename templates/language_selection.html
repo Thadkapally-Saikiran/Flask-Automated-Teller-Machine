@@ -1,0 +1,13 @@
+{% extends "base.html" %} <!-- Inherit from base.html template -->
+{% block content %} <!-- Begin content block for language selection -->
+  <h1>Select Language / भाषा चुनें:</h1> <!-- Heading that shows language selection in both English and Hindi -->
+  <form method="POST"> <!-- Form to submit the language choice via POST method -->
+    <label>
+      <input type="radio" name="language" value="1" checked> English <!-- Radio button for English with default checked status -->
+    </label>
+    <label>
+      <input type="radio" name="language" value="2"> हिंदी <!-- Radio button for Hindi -->
+    </label>
+    <button type="submit" class="btn3">Continue</button> <!-- Button to submit the language selection -->
+  </form>
+{% endblock %} <!-- End of content block -->

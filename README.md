@@ -8,7 +8,7 @@
 A feature-rich web-based ATM simulator with multi-language support, transaction history, and secure authentication system.
 
 ![ATM Dashboard Preview](assets/dashboard.png) 
-*Example: Dashboard Preview (Add actual screenshots later)*
+*Example: Dashboard Preview*
 
 ## ✨ Features
 

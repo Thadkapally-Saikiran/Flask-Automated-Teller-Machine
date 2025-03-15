@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-2.0.1-green)](https://flask.palletsprojects.com/)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)](https://www.mysql.com/)
-[![License](https://img.shields.io/badge/License-MIT-red)](LICENSE)
+
 
 A feature-rich web-based ATM simulator with multi-language support, transaction history, and secure authentication system.
 
